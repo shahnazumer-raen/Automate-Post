@@ -1,0 +1,6 @@
+openai
+langchain
+qdrant-client
+tiktoken
+python-dotenv
+streamlit

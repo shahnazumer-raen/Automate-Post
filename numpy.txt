@@ -1,0 +1,27 @@
+This tutorial is for people who have a basic understanding of linear algebra and arrays in NumPy and want to understand how n-dimensional (
+) arrays are represented and can be manipulated. In particular, if you don’t know how to apply common functions to n-dimensional arrays (without using for-loops), or if you want to understand axis and shape properties for n-dimensional arrays, this tutorial might be of help.
+Understand the difference between one-, two- and n-dimensional arrays in NumPy;
+Understand how to apply some linear algebra operations to n-dimensional arrays without using for-loops;
+Understand axis and shape properties for n-dimensional arrays.
+inear algebra on n-dimensional arrays
+Data is collected in many different formats from numbers to images, from categories to sound waves. However, we need the data represented with numbers to be able analyze it on computers. Machine learning and deep learning models are data-hungry. The performance of them is highly dependent on the amount of data. Thus, we tend to collect as much data as possible in order to build a robust and accurate model. As the amount of data increases, the operations done with scalars start to be inefficient. We need vectorized or matrix operations to make computations efficiently. That’s where linear algebra comes into play.
+Linear algebra is one of the most important topics in data science domain. In this post, we will cover some basic terms in linear algebra and go through examples using NumPy, a scientific computing library for Python.
+There are different types of objects (or structures) in linear algebra:
+Scalar: Single number
+Vector: Array of numbers
+Matrix: 2-dimensional array of numbers
+Tensor: N-dimensional array of numbers where n > 2
+the concept of masked arrays in NumPy and their usefulness in handling missing or invalid data
+A masked array is the combination of a standard numpy. ndarray and a mask. A mask is either nomask , indicating that no value of the associated array is invalid, or an array of booleans that determines for each element of the associated array whether the value is valid or not.
+how to build and train a simple feed-forward neural network from scratch using NumPy to classify handwritten MNIST digits
+Fetch the data from the MNIST website
+Split train-images into training set and validation set
+Initialize the weights
+Define our activation functions and its derivatives
+Define a function for forward pass and backward pass (laborious!)
+Train our model in batches using SGD, update the weights and test our model on the validation set
+Predict on the test data and print the accuracy
+This tutorial demonstrates how to build a simple feedforward neural network (with one hidden layer) and train it from scratch with NumPy to recognize handwritten digit images.
+Your deep learning model — one of the most basic artificial neural networks that resembles the original multi-layer perceptron — will learn to classify digits from 0 to 9 from the MNIST dataset. The dataset contains 60,000 training and 10,000 test images and corresponding labels. Each training and test image is of size 784 (or 28x28 pixels) — this will be your input for the neural network.
+Based on the image inputs and their labels (supervised learning), your neural network will be trained to learn their features using forward propagation and backpropagation (reverse-mode differentiation). The final output of the network is a vector of 10 scores — one for each handwritten digit image. You will also evaluate how good your model is at classifying the images on the test set.
+Load the MNIST dataset
