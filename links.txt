@@ -1,0 +1,17 @@
+
+    links = ["https://numpy.org/numpy-tutorials/content/tutorial-svd.html",
+             "https://numpy.org/numpy-tutorials/content/save-load-arrays.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-ma.html",
+             "https://numpy.org/numpy-tutorials/content/mooreslaw-tutorial.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-deep-learning-on-mnist.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-x-ray-image-processing.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-static_equilibrium.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-plotting-fractals.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-air-quality-analysis.html",
+             "https://numpy.org/numpy-tutorials/content/pairing.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-style-guide.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-deep-reinforcement-learning-with-pong-from-pixels.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-nlp-from-scratch.html"
+             ]
+
+    

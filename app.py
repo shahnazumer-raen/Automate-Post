@@ -49,7 +49,7 @@ def main():
     load_dotenv()
     
     st.set_page_config(page_title="Ask Me")
-    st.header("Ask your remote database 💬")
+    st.header("Blog App 💬")
     
     # create vector store
     vector_store = get_vector_store()
