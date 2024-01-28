@@ -7,13 +7,15 @@ from langchain.text_splitter import CharacterTextSplitter
 from qdrant_client.http import models
 from langchain.llms import OpenAI
 from qdrant_client import QdrantClient
+from langchain.prompts import ChatPromptTemplate
+from langchain.chat_models import ChatOpenAI
+from langchain.schema.output_parser import StrOutputParser
 from langchain.chains import RetrievalQA
 import qdrant_client
 import os
 
 
 def get_vector_store():
-    
     client = qdrant_client.QdrantClient(
         os.getenv("QDRANT_HOST"),
         api_key=os.getenv("QDRANT_API_KEY")
@@ -51,23 +53,18 @@ def main():
     st.set_page_config(page_title="Ask Me")
     st.header("Blog App 💬")
     
-    # create vector store
-    vector_store = get_vector_store()
     
     # create chain 
-    qa = RetrievalQA.from_chain_type(
-        llm=OpenAI(),
-        chain_type="stuff",
-        retriever=vector_store.as_retriever()
+qa = RetrievalQA.from_chain_type(
+    llm=OpenAI(),
+    chain_type="stuff",
+    retriever=vector_store.as_retriever()
     )
 
     # show user input
-    user_question = st.text_input("Ask a question about your PDF:")
-    if user_question:
+user_question = st.text_input("Ask a question:")
+if user_question:
         st.write(f"Question: {user_question}")
         answer = qa.run(user_question)
         st.write(f"Answer: {answer}")
     
-        
-if __name__ == '__main__':
-    main()
